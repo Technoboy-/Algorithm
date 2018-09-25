@@ -1,0 +1,24 @@
+/opt/jdk/bin/java -Dsun.misc.URLClassPath.disableJarChecking=true
+-Xmx8192m -XX:MaxDirectMemorySize=4096m 
+-Dfile.encoding=UTF-8 
+-Xloggc:/data/www/red-packet-c2c.20180925.1713/gc.log 
+-XX:+PrintGCDetails -XX:+PrintGCDateStamps 
+-Dlogging.config=/data/www/red-packet-c2c.20180925.1713/logback.xml 
+-Dfile.encoding=UTF-8 
+-XX:+PrintCommandLineFlags 
+-XX:ReservedCodeCacheSize=240M 
+-Xloggc:gc.log 
+-XX:+PrintTenuringDistribution 
+-XX:+PrintGCApplicationStoppedTime 
+-XX:-UseBiasedLocking 
+-XX:-UseCounterDecay 
+-XX:AutoBoxCacheMax=20000 
+-XX:+AlwaysPreTouch 
+-Djava.security.egd=file:/dev/./urandom 
+-XX:-OmitStackTraceInFastThrow 
+-XX:+HeapDumpOnOutOfMemoryError 
+-XX:+UseConcMarkSweepGC 
+-XX:CMSInitiatingOccupancyFraction=75 
+-XX:+UseCMSInitiatingOccupancyOnly 
+-XX:+ExplicitGCInvokesConcurrent 
+-XX:+ParallelRefProcEnabled -jar test.jar
